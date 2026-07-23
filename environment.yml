@@ -1,0 +1,24 @@
+name: traffic-defense
+
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - pillow
+  - pyyaml
+  - scipy
+  - tqdm
+  - jupyter
+  - pip:
+      - ultralytics
+      - torch
+      - torchvision
+      - opencv-python
+      - albumentations
