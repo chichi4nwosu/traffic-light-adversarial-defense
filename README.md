@@ -105,6 +105,5 @@ The datasets are not distributed with this repository because of licensing and s
 
 ## Citation
 
-If you use this repository in your work, please cite the forthcoming publication.
 
 BibTeX will be added upon publication.
