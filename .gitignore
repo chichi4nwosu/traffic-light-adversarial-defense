@@ -216,3 +216,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Research outputs
+runs/
+wandb/
+outputs_train/
+outputs-defense-robust/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# macOS
+.DS_Store
+
+# Dataset contents (keep README only)
+datasets/*/
+!datasets/README.md
