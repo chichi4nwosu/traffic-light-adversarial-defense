@@ -1,109 +1,80 @@
 # Traffic Light Adversarial Defense
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-green)
-![Research](https://img.shields.io/badge/Research-REU-orange)
-
-<p align="center">
-  <img src="publication/figures/poster_preview.png" width="900">
-</p>
-
-<p align="center">
-  <b>Summer 2026 REU Research Poster</b><br>
-  <a href="publication/poster.pdf">View Full Poster (PDF)</a>
-</p>
+> Adversarial patch attacks, transferability analysis, and defense strategies for traffic light detection using YOLOv8.
 
 ---
 
 ## Overview
 
-This repository contains the code, experiments, and research materials developed during my Summer 2026 Research Experience for Undergraduates (REU).
+This repository contains the code, experiments, and publication materials for research on adversarial patch attacks against traffic light detection systems. The project investigates both attack effectiveness and cross-model transferability while exploring defenses for improving robustness.
 
-The project investigates the vulnerability of YOLOv8 traffic light detection models to universal adversarial patch attacks and explores adversarial training as a defense mechanism. Experiments were conducted using the Bosch Small Traffic Lights Dataset (BSTLD) and the LISA Traffic Light Dataset to evaluate attack effectiveness, robustness, and cross-dataset transferability.
+## Features
 
----
-
-## Research Objectives
-
-- Evaluate the robustness of YOLOv8 traffic light detectors
-- Generate universal adversarial patches using Expectation over Transformation (EOT)
-- Measure attack success on BSTLD and LISA
-- Improve robustness through adversarial training
-- Study attack transferability across datasets and models
+- PGD adversarial patch generation
+- YOLOv8-based traffic light detection
+- BSTLD and LISA dataset support
+- Transferability evaluation
+- Defense experiments
+- Reproducible research pipeline
 
 ---
 
 ## Repository Structure
 
 ```text
-traffic-light-adversarial-defense/
-├── configs/          Training and experiment configurations
-├── datasets/         Dataset setup instructions
-├── docs/             Project documentation
-├── experiments/      Dataset-specific experiments
-├── models/           Model checkpoints (optional)
-├── publication/      Poster and publication materials
-├── results/          Figures, tables, and evaluation results
-├── scripts/          Training, attack, and evaluation code
-├── README.md
-├── requirements.txt
-└── environment.yml
+configs/          Configuration files
+datasets/         Dataset documentation
+docs/             Project documentation
+experiments/      Research experiments
+models/           Model checkpoints
+patch_utils/      Shared attack utilities
+publication/      Paper, figures, tables
+results/          Experimental outputs
+scripts/          Training and evaluation scripts
 ```
 
 ---
 
-## Experimental Pipeline
+## Installation
 
-1. Train a baseline YOLOv8 detector.
-2. Generate universal adversarial patches using EOT.
-3. Evaluate attack performance on BSTLD.
-4. Test transferability using the LISA dataset.
-5. Retrain using adversarial training.
-6. Compare robustness before and after defense.
+```bash
+conda env create -f environment.yml
+conda activate traffic-defense
+```
 
 ---
 
-## Results
+## Running Experiments
 
-The generated adversarial patches significantly reduced YOLOv8 detection performance on both BSTLD and LISA.
+Train a patch
 
-Adversarial training substantially improved robustness while maintaining strong performance on clean images.
+```bash
+python scripts/train_patch_yolov8_fixed.py
+```
 
-Additional quantitative results, figures, and analyses will be added as the repository continues to be prepared for publication.
+Evaluate
+
+```bash
+python scripts/evaluate_patch.py
+```
 
 ---
 
 ## Datasets
 
-- Bosch Small Traffic Lights Dataset (BSTLD)
-- LISA Traffic Light Dataset
+- BSTLD
+- LISA
 
-The datasets are not distributed with this repository because of licensing and storage limitations. Please download them from their official sources before running the experiments.
-
----
-
-## Current Status
-
-### Completed
-
-- Baseline YOLOv8 training
-- Universal adversarial patch implementation
-- EOT optimization
-- BSTLD evaluation
-- LISA evaluation
-- Adversarial training
-
-### In Progress
-
-- Transferability analysis
-- Repository cleanup
-- Reproducibility improvements
-- Manuscript preparation
+See `datasets/README.md` for setup instructions.
 
 ---
 
-## Citation
+## Publication
 
+Paper, figures, tables, and poster are located in the `publication/` directory.
 
-BibTeX will be added upon publication.
+---
+
+## License
+
+MIT License
