@@ -29,6 +29,11 @@ import sys
 import torch
 from torch.utils.data import Dataset, DataLoader
 import torch.optim as optim
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 from torchvision.utils import save_image
 from tqdm import tqdm
 
@@ -42,6 +47,7 @@ from ultralytics.utils.loss import v8DetectionLoss
 from patch_utils.general import load_classes, store_wandb_image_with_bboxes
 from patch_utils.losses import yolo_loss, total_variation_loss, green_channel_penalty, similarity_loss
 from patch_utils.transforms import patch_brightness, patch_pad, patch_rotate, patch_resize
+
 
 
 def transform_patch_for_display(current_patch):
