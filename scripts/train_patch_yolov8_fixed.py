@@ -29,17 +29,19 @@ import sys
 import torch
 from torch.utils.data import Dataset, DataLoader
 import torch.optim as optim
-from pathlib import Path
-import sys
-
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
 from torchvision.utils import save_image
 from tqdm import tqdm
 
 from ultralytics import YOLO
 from ultralytics.data import YOLODataset
 from ultralytics.cfg import get_cfg
+
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from patch_utils.losses import yolo_loss, total_variation_loss, v8AttackLoss
 from patch_utils.transforms import patch_brightness, patch_pad, patch_rotate, patch_resize
