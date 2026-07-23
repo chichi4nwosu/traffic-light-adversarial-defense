@@ -22,3 +22,4 @@ dependencies:
       - torchvision
       - opencv-python
       - albumentations
+      - wandb
