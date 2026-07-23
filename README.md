@@ -1,5 +1,7 @@
 # Traffic Light Adversarial Defense
-
+<p align="center">
+  <img src="publication/figures/poster_preview.png" width="900">
+</p>
 > Research on adversarial patch attacks and defense strategies for YOLOv8 traffic light detection using the BSTLD and LISA datasets.
 
 ---
@@ -11,6 +13,28 @@ This repository contains the implementation and experimental results for researc
 This work was completed as part of a Research Experience for Undergraduates (REU) program.
 
 ---
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-green)
+![Research](https://img.shields.io/badge/Research-REU-orange)
+
+## Experimental Pipeline
+BSTLD / LISA
+        │
+        ▼
+Baseline YOLOv8
+        │
+        ▼
+Generate Universal Patch
+        │
+        ▼
+Attack Evaluation
+        │
+        ▼
+Adversarial Training
+        │
+        ▼
+Defense Evaluation
 
 ## Features
 
