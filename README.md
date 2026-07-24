@@ -1,36 +1,43 @@
-# Traffic Light Adversarial Defense
+<div align="center">
 
-> Adversarial patch attacks, transferability analysis, and defense strategies for traffic light detection using YOLOv8.
+# 🚦 Traffic Light Adversarial Defense
+
+### Adversarial Patch Attacks and Defense for YOLO-Based Traffic Light Detection
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-red)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+<img src="assets/banner.png" width="850"/>
+
+</div>
 
 ---
 
 ## Overview
 
-This repository contains the code, experiments, and publication materials for research on adversarial patch attacks against traffic light detection systems. The project investigates both attack effectiveness and cross-model transferability while exploring defenses for improving robustness.
+This repository contains the code and experiments for studying adversarial patch attacks and defense strategies for traffic light detection using YOLOv8.
 
-## Features
-
+**Features**
 - PGD adversarial patch generation
-- YOLOv8-based traffic light detection
-- BSTLD and LISA dataset support
 - Transferability evaluation
 - Defense experiments
-- Reproducible research pipeline
+- BSTLD and LISA dataset support
 
 ---
 
 ## Repository Structure
 
 ```text
-configs/          Configuration files
-datasets/         Dataset documentation
-docs/             Project documentation
-experiments/      Research experiments
-models/           Model checkpoints
-patch_utils/      Shared attack utilities
-publication/      Paper, figures, tables
-results/          Experimental outputs
-scripts/          Training and evaluation scripts
+configs/        Experiment configurations
+datasets/       Dataset information
+docs/           Project documentation
+experiments/    Training and evaluation
+patch_utils/    Shared utilities
+publication/    Paper, figures, and tables
+results/        Experiment outputs
+scripts/        Training and evaluation scripts
 ```
 
 ---
@@ -40,11 +47,12 @@ scripts/          Training and evaluation scripts
 ```bash
 conda env create -f environment.yml
 conda activate traffic-defense
+pip install -r requirements.txt
 ```
 
 ---
 
-## Running Experiments
+## Quick Start
 
 Train a patch
 
@@ -52,7 +60,7 @@ Train a patch
 python scripts/train_patch_yolov8_fixed.py
 ```
 
-Evaluate
+Evaluate a patch
 
 ```bash
 python scripts/evaluate_patch.py
@@ -69,12 +77,12 @@ See `datasets/README.md` for setup instructions.
 
 ---
 
-## Publication
+## Citation
 
-Paper, figures, tables, and poster are located in the `publication/` directory.
+If you use this repository, please cite the associated publication (coming soon).
 
 ---
 
 ## License
 
-MIT License
+MIT License.
